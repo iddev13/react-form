@@ -1,0 +1,21 @@
+.headerList {
+	display: flex;
+	align-items: center;
+}
+
+.headerList li:not(:last-child) {
+	margin-right: 15px;
+}
+
+.headerList a {
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.548);
+	transition: all 0.3s ease;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+
+.headerList a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
