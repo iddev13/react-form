@@ -1,8 +1,7 @@
 import { Field, reduxForm, reset } from "redux-form"
-import { required, maxLenghtCreator } from "../../../utils/validators";
+import { required, email } from "../../../utils/validators";
 import { Input } from "../../common/form-controls/FormControls";
 
-const maxSymbolLength = maxLenghtCreator(10);
 
 const afterSubmit = (result, dispatch) =>
 	dispatch(reset('home'));
@@ -11,16 +10,17 @@ const HomeForm = (props) => {
 	return (
 		<form onSubmit={props.handleSubmit}  >
 			<div className="form__item">
+				<label htmlFor="home">email</label>
 				<Field
 					name="home"
 					component={Input}
 					type="text"
 					placeholder="Enter some text..."
-					validate={[required, maxSymbolLength]}
+					validate={[required, email]}
 				/>
 			</div>
 			<div className="form__item">
-				<button>send</button>
+				<button className="btnSubmit">send</button>
 			</div>
 		</form>
 	)

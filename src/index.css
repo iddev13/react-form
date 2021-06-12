@@ -150,8 +150,78 @@ h2 {
 .section {
 }
 
-.form {
+.section li {
+  margin-bottom: 5px;
 }
 
+.form {
+  width: 600px;
+  margin: 20px auto;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px 10px 20px;
+}
+
+.form h2 {
+  padding: 0px 0px 20px 0px;
+}
 .form__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 15px 0px;
+}
+
+.form__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.form__item label {
+  flex: 0 0 150px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  text-transform: capitalize;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.form__item label::after {
+  content: ":";
+}
+
+.btnSubmit {
+  padding: 6px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(172, 255, 47, 0.788);
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 0 auto;
+}
+
+.btnSubmit::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background: #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.btnSubmit:hover {
+  background-color: rgba(172, 255, 47, 0.897);
+  box-shadow: 0px 0px 2px 1px rgba(172, 255, 47, 0.897);
+}
+
+.btnSubmit:active {
+  border-color: #333;
+  box-shadow: 0px 0px 5px 1px greenyellow;
+  background-color: greenyellow;
 }

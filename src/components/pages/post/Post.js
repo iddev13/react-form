@@ -5,22 +5,32 @@ import './Post.css';
 const Post = (props) => {
 
 	const onAddPostText = (values) => {
-		props.addPostPosts(values.post)
+		props.addPostPosts(values)
 		console.log(values);
 	}
 
 	return (
 		<section className="section">
-			<h2>Post</h2>
-			<div className="postList">
+
+			<div className="postLists">
 				<ul>
 					{props.posts.map((elem) => {
-						return <li key={elem.id}>{elem.message}</li>
+						return <li key={elem.id}>{elem.login}</li>
+					})}
+				</ul>
+				<ul>
+					{props.posts.map((elem) => {
+						return <li key={elem.id}>{elem.password}</li>
 					})}
 				</ul>
 			</div>
-			<button onClick={() => { console.log(props); }}>PUSH</button>
-			<PostReduxForm {...props} onSubmit={onAddPostText} />
+			<button className="btnSubmit" onClick={() => { console.log(props); }}>PUSH</button>
+			<div className="form">
+				<div>
+					<h2>Post</h2>
+				</div>
+				<PostReduxForm {...props} onSubmit={onAddPostText} />
+			</div>
 		</section>
 	)
 }

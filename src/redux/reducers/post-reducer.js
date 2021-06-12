@@ -3,19 +3,19 @@ const POST_SUBMIT_SUCCESS = 'POST_SUBMIT_SUCCESS';
 
 let initialState = {
 	posts: [
-		{ id: 1, message: 'qqq' },
-		{ id: 2, message: 'www' },
-		{ id: 3, message: 'eee' },
-		{ id: 4, message: 'rrr' },
-		{ id: 5, message: 'ttt' },
+		{ id: 1, login: 'qqq', password: 'sss' },
+		{ id: 2, login: 'www', password: 'ddd' },
+		{ id: 3, login: 'eee', password: 'fff' },
+		{ id: 4, login: 'rrr', password: 'ggg' },
+		{ id: 5, login: 'ttt', password: 'hhh' },
 	]
 }
 
 const postReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_POST_POSTS:
-			console.log(action.values);
-			let newPost = { id: state.posts.length + 1, message: action.values }
+			console.log(action.values.login);
+			let newPost = { id: state.posts.length + 1, login: action.values.login, password: action.values.password }
 			return {
 				...state,
 				posts: [...state.posts, newPost]

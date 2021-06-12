@@ -1,0 +1,9 @@
+.postLists {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0px 20px 0px;
+}
+
+.postLists ul:not(:last-child) {
+	margin-right: 20px;
+}

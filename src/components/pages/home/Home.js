@@ -9,7 +9,7 @@ const Home = (props) => {
 
 	return (
 		<section className="section">
-			<h2>Home</h2>
+
 			<div className="homePost">
 				<ul>
 					{props.homePosts.map(elem => {
@@ -17,8 +17,11 @@ const Home = (props) => {
 					})}
 				</ul>
 			</div>
-			<button onClick={() => { console.log(props); }}>push</button>
+			<button className="btnSubmit" onClick={() => { console.log(props); }}>push</button>
 			<div className="form">
+				<div>
+					<h2>Home</h2>
+				</div>
 				<HomeReduxForm {...props} onSubmit={onAddHomeText} />
 			</div>
 		</section>

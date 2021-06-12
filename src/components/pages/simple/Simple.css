@@ -1,0 +1,14 @@
+.simpleLists {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px 0px 20px 0px;
+}
+.simpleLists span {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.simpleLists span:last-child {
+	margin: 0px 0px 0px 0px;
+}
